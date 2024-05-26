@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(37, 35, 35);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed; /* Fix the entire nav to the top */
+    top: 0;
+    width: 100%; /* Make sure it spans the full width */
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: background for better visibility */
+    z-index: 45; /* Ensure it stays above other content */
+    padding: 10px 0; /* Add some padding for better appearance */
+}
+
+.nov {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: antiquewhite;
+    padding: 0 20px; /* Optional: Add some padding to the sides */
+}
+
+.navbar {
+    display: flex;
+    gap: 20px; /* Adjust gap as needed */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 15px; /* Add padding for clickable area */
+    transition: background-color 0.3s;
+}
+
+.nav:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Add a hover effect */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
+
+.niv {
+    font-size: 18px;
+}
+
+.writing {
+    max-width: 400px; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+.writing1{
+    font-size: 18px;
+}
+.img {
+    position: fixed;
+    right: 20%; /* Adjust position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    max-width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    margin-top: -30px;
+    transition: transform 1s ease-in-out, margin 0.1s ease-in-out;
+}
+
+.img img:hover {
+    transform: scale(1.1);
+    margin-top: -40px; 
+    box-shadow: 10px 10px 10px rgb(244, 74, 12);
+    border-radius: 40%;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-start; /* Ensure content stays to the left */
+    margin-top: 15%;
+    color: white;
+    margin-left: 10%;
+}
+
+.change{
+    color: rgb(244, 74, 12);
+    font-size: 36px;
+    font-family: cursive;
+}
+
+.heading{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    width: 20px; 
+    height: 20px; 
+    animation: ripple-effect 1s linear;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(10); 
+        opacity: 0;
+    }
+}

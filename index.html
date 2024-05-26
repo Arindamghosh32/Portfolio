@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+    <nav>
+        <div class="nov">
+            <div class="niv">
+                <h1>PortFolio</h1>
+            </div>
+        
+        <ul class="navbar">
+            <a href="./index.html" class="nav">Home</a>
+            <a href="./About.html" class="nav">About</a>
+            <a href="./Experience.html" class="nav">Experience</a>
+            <a href="./Contact.html" class="nav">Contact</a>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="main">
+        <div class="writing">
+            <div class="heading">I am a <span class="change"></span></div>
+            <div class="writing1"></div>
+        </div>
+    </div>
+
+    <div class="img">
+        <img src="images/WhatsApp Image 2024-05-21 at 22.20.13_cbc21d32.jpg" alt=""/>
+    </div>
+
+    <script src="js/scripts.js"></script>
+   
+    <script>
+        const div = document.querySelector(".writing1");
+
+        const text = `Rishiraj is a dynamic and passionate individual known for his dedication and versatility.
+        With a strong academic background and a keen interest in continuous learning, he excels in his field, whether it be technology, business, or creative endeavors.
+        Rishiraj combines his analytical skills with a creative mindset to solve complex problems and innovate solutions.
+         He is a natural leader, inspiring those around him with his commitment to excellence and collaborative spirit. 
+         Outside of his professional pursuits, Rishiraj is an avid reader and enjoys exploring new cultures through travel. 
+         His resilience and adaptability make him a valuable asset in any endeavor he undertakes.`;
+
+        function textTypingEffect(element, text, i=0){
+            element.textContent += text[i];
+            if(i === text.length - 1){
+               return;
+            }
+            setTimeout(()=>textTypingEffect(element, text, i+1),30);
+        }
+        textTypingEffect(div, text);
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".change",{
+            strings: ["Data Scientist", "ML Developer", "LLM Engineer"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop:true
+        });
+    </script>
+</body>
+</html>
